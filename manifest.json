@@ -2,7 +2,7 @@
   "name": "Lighthouse Gauge",
   "organization": "James Buckley",
   "description": "Lighthouse Gauge",
-  "logoUrl": "gs://jjbuckley-datastudio/lighthouse-gauge/cover.png",
+  "logoUrl": "gs://le-bucket-1311/barViz/cover.png",
   "packageUrl": "https://github.com/JibbyJames/data-studio-lighthouse-gauge",
   "supportUrl": "https://github.com/JibbyJames/data-studio-lighthouse-gauge",
   "devMode": false,
