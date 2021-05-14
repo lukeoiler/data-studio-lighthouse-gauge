@@ -5,7 +5,7 @@
 /*! no static exports found */function(e,N,R){"use strict";var i=this&&this.__assign||function(){return(i=Object.assign||function(e){for(var R,C=1,t=arguments.length;C<t;C++)for(var n in R=arguments[C])Object.prototype.hasOwnProperty.call(R,n)&&(e[n]=R[n]);return e}).apply(this,arguments)};Object.defineProperty(N,"__esModule",{value:!0});
 /*!
   @license
-  Copyright 2019 Google LLC
+  Copyright 2019 Google LLCd
 
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
@@ -109,7 +109,7 @@ function drawGauge(metricValue, metricType, gaugeOptions) {
     var gaugeDivExists = true && gaugeDiv
 
     var lineWidth = gaugeOptions['lineThickness'];
-    var rotation = gaugeOptions['progressStartingPoint'];
+    //var rotation = gaugeOptions['progressStartingPoint'];
     var lineCap = gaugeOptions['roundedLineEdge'];
 
     if (!gaugeDivExists) {
@@ -141,16 +141,16 @@ function drawGauge(metricValue, metricType, gaugeOptions) {
     progressArcCircle.style.setProperty('stroke-linecap', (lineCap ? 'round' : 'butt'));
 
     // Rotations are weird in safari and are affected by stroke width
-    var transformOriginCenter = "center"
-    if(isSafari) {
-        var realCenter = (SVG_SIZE/4);
-        var safariCenter = realCenter - (lineWidth/2) - (realCenter*0.15);
-        var transformOriginCenter = safariCenter + "px " + safariCenter + "px";
-    }
-    progressBackgroundCircle.style.setProperty('transform-origin', transformOriginCenter);
-    progressBackgroundCircle.style.setProperty('transform', 'rotate(' + rotation + 'deg)');
-    progressArcCircle.style.setProperty('transform-origin', transformOriginCenter);
-    progressArcCircle.style.setProperty('transform', 'rotate(' + rotation + 'deg)');
+    //var transformOriginCenter = "center"
+    //if(isSafari) {
+    //    var realCenter = (SVG_SIZE/4);
+    //    var safariCenter = realCenter - (lineWidth/2) - (realCenter*0.15);
+    //    var transformOriginCenter = safariCenter + "px " + safariCenter + "px";
+    //}
+    //progressBackgroundCircle.style.setProperty('transform-origin', transformOriginCenter);
+    //progressBackgroundCircle.style.setProperty('transform', 'rotate(' + rotation + 'deg)');
+    //progressArcCircle.style.setProperty('transform-origin', transformOriginCenter);
+    //progressArcCircle.style.setProperty('transform', 'rotate(' + rotation + 'deg)');
 
     progressSvg.appendChild(progressBackgroundCircle);
     progressSvg.appendChild(progressArcCircle);
