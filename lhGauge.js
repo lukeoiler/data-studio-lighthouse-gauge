@@ -123,7 +123,7 @@ function drawGauge(metricValue, metricType, gaugeOptions) {
     progressSvg.height = SVG_SIZE;
     progressSvg.setAttribute("viewBox", "0 0 " + (SVG_SIZE/2) + " " + (SVG_SIZE/2));
 
-    var progressBackgroundCircle = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
+    var progressBackgroundCircle = document.createElementNS("http://www.w3.org/2000/svg", 'rect');
     progressBackgroundCircle.id = progressBackgroundCircleId;
     progressBackgroundCircle.setAttribute("cx", (SVG_SIZE/4));
     progressBackgroundCircle.setAttribute("cy", (SVG_SIZE/4));
@@ -131,7 +131,7 @@ function drawGauge(metricValue, metricType, gaugeOptions) {
     progressBackgroundCircle.setAttribute("stroke-width", lineWidth);
     progressBackgroundCircle.style.setProperty('transform-box', 'fill-box');
 
-    var progressArcCircle = document.createElementNS("http://www.w3.org/2000/svg", 'circle');
+    var progressArcCircle = document.createElementNS("http://www.w3.org/2000/svg", 'rect');
     progressArcCircle.id = progressArcCircleId;
     progressArcCircle.setAttribute("cx", (SVG_SIZE/4));
     progressArcCircle.setAttribute("cy", (SVG_SIZE/4));
